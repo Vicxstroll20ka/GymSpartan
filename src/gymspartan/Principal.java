@@ -1,19 +1,16 @@
 package gymspartan;
-
 import java.awt.*;
 import java.awt.event.WindowEvent;
 public class Principal extends javax.swing.JFrame {
-    
-    public Principal() {
-        
+    public Principal() { 
         initComponents();
         setResizable(true);
         setSize(750,730);
-        setTitle("GymSpartan");
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
         jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
@@ -25,12 +22,13 @@ public class Principal extends javax.swing.JFrame {
         setBackground(new java.awt.Color(255, 255, 255));
         setBounds(new java.awt.Rectangle(300, 0, 0, 0));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setUndecorated(true);
         getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setFont(new java.awt.Font("Garamond", 0, 12)); // NOI18N
         jPanel1.setPreferredSize(new java.awt.Dimension(750, 730));
-        jPanel1.setLayout(null);
+        jPanel1.setLayout(new java.awt.GridBagLayout());
 
         jButton1.setFont(new java.awt.Font("Garamond", 0, 14)); // NOI18N
         jButton1.setText("Exit");
@@ -39,8 +37,14 @@ public class Principal extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1);
-        jButton1.setBounds(100, 550, 140, 80);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.ipadx = 84;
+        gridBagConstraints.ipady = 53;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(150, 100, 100, 0);
+        jPanel1.add(jButton1, gridBagConstraints);
 
         jButton2.setFont(new java.awt.Font("Garamond", 0, 14)); // NOI18N
         jButton2.setText("Start");
@@ -49,18 +53,39 @@ public class Principal extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2);
-        jButton2.setBounds(490, 550, 130, 80);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.ipadx = 70;
+        gridBagConstraints.ipady = 53;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(150, 250, 100, 130);
+        jPanel1.add(jButton2, gridBagConstraints);
 
         jLabel2.setFont(new java.awt.Font("Engravers MT", 0, 18)); // NOI18N
         jLabel2.setText("WELCOME TO GYM SPARTAN!!");
-        jPanel1.add(jLabel2);
-        jLabel2.setBounds(210, 350, 380, 50);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.ipadx = 28;
+        gridBagConstraints.ipady = 28;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(70, 210, 0, 0);
+        jPanel1.add(jLabel2, gridBagConstraints);
 
         jLabel1.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gymspartan/Captura.PNG"))); // NOI18N
-        jPanel1.add(jLabel1);
-        jLabel1.setBounds(220, 60, 290, 220);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.ipadx = -2;
+        gridBagConstraints.ipady = 8;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(60, 220, 0, 0);
+        jPanel1.add(jLabel1, gridBagConstraints);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 750, 730);
@@ -113,4 +138,5 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
+
 }
