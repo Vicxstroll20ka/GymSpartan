@@ -13,7 +13,6 @@ public class Principal extends javax.swing.JFrame {
         java.awt.GridBagConstraints gridBagConstraints;
 
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -30,24 +29,8 @@ public class Principal extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(750, 730));
         jPanel1.setLayout(new java.awt.GridBagLayout());
 
-        jButton1.setFont(new java.awt.Font("Garamond", 0, 14)); // NOI18N
-        jButton1.setText("Exit");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.ipadx = 84;
-        gridBagConstraints.ipady = 53;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(150, 100, 100, 0);
-        jPanel1.add(jButton1, gridBagConstraints);
-
-        jButton2.setFont(new java.awt.Font("Garamond", 0, 14)); // NOI18N
-        jButton2.setText("Start");
+        jButton2.setFont(new java.awt.Font("Garamond", 0, 18)); // NOI18N
+        jButton2.setText("START");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -88,14 +71,10 @@ public class Principal extends javax.swing.JFrame {
         jPanel1.add(jLabel1, gridBagConstraints);
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 750, 730);
+        jPanel1.setBounds(-40, -10, 810, 730);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        System.exit(0);
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         V1 v1 = new V1();
@@ -132,7 +111,6 @@ public class Principal extends javax.swing.JFrame {
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
