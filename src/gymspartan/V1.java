@@ -1,13 +1,14 @@
 package gymspartan;
 import java.awt.Toolkit;
 import java.awt.event.WindowEvent;
+import javax.swing.JOptionPane;
 
 public class V1 extends javax.swing.JFrame {
     public V1() {
         initComponents();
         setResizable(false);
         setSize(750,730);
-        jLabel2.setVisible(false);
+                
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -27,7 +28,6 @@ public class V1 extends javax.swing.JFrame {
         jRadioButton5 = new javax.swing.JRadioButton();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBounds(new java.awt.Rectangle(300, 0, 0, 0));
@@ -35,39 +35,49 @@ public class V1 extends javax.swing.JFrame {
         getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
-        jLabel1.setText("Which rutine will you practice today?");
+        jLabel1.setText("Which rutine will you do today?");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(105, 46, 323, 40);
 
         buttonGroup1.add(jRadioButton1);
         jRadioButton1.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
-        jRadioButton1.setText("Pectoral and ABS ");
+        jRadioButton1.setText("Routine");
+        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jRadioButton1);
         jRadioButton1.setBounds(110, 110, 150, 30);
 
         buttonGroup1.add(jRadioButton2);
         jRadioButton2.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
-        jRadioButton2.setText("Back");
+        jRadioButton2.setText("Get in massages room");
+        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jRadioButton2);
-        jRadioButton2.setBounds(110, 180, 79, 26);
+        jRadioButton2.setBounds(110, 180, 210, 26);
 
         buttonGroup1.add(jRadioButton3);
         jRadioButton3.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
-        jRadioButton3.setText("Shoulders and Back");
+        jRadioButton3.setText("Get in the pool");
         getContentPane().add(jRadioButton3);
         jRadioButton3.setBounds(110, 250, 170, 26);
 
         buttonGroup1.add(jRadioButton4);
         jRadioButton4.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
-        jRadioButton4.setText("Legs");
+        jRadioButton4.setText("Get in a class");
         getContentPane().add(jRadioButton4);
-        jRadioButton4.setBounds(110, 320, 52, 26);
+        jRadioButton4.setBounds(110, 320, 170, 26);
 
         buttonGroup1.add(jRadioButton5);
         jRadioButton5.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
-        jRadioButton5.setText("Arms and ABS");
+        jRadioButton5.setText("Get in store");
         getContentPane().add(jRadioButton5);
-        jRadioButton5.setBounds(110, 390, 114, 26);
+        jRadioButton5.setBounds(110, 390, 170, 26);
 
         jButton1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jButton1.setText("CANCEL");
@@ -89,11 +99,6 @@ public class V1 extends javax.swing.JFrame {
         getContentPane().add(jButton2);
         jButton2.setBounds(500, 510, 140, 70);
 
-        jLabel2.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 24)); // NOI18N
-        jLabel2.setText("Will you need an Auxiliar Robot?");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(120, 140, 370, 160);
-
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -104,23 +109,38 @@ public class V1 extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        int cont = 1;
-        switch(cont){
-            case 1:
-                jLabel1.setVisible(false);
-                jRadioButton1.setVisible(false);
-                jRadioButton2.setVisible(false);
-                jRadioButton3.setVisible(false);
-                jRadioButton4.setVisible(false);
-                jRadioButton5.setVisible(false);
-                jLabel2.setVisible(true);
-                break;                
-        }
-        if (jRadioButton1.isSelected()) {
-            
+        if (jRadioButton1.isSelected()){
+            V2Routines v2 = new V2Routines();
+            v2.setVisible(true);
+            close();
+        }else if(jRadioButton2.isSelected()){
+            V2Massages v3 = new V2Massages();
+            v3.setVisible(true);
+            close();
+        }else if (jRadioButton3.isSelected()) {
+            V2Pool v4 = new V2Pool();
+            v4.setVisible(true);
+            close();
+        }else if (jRadioButton4.isSelected()) {
+            V2Class v5 = new V2Class();
+            v5.setVisible(true);
+            close();
+        }else if (jRadioButton5.isSelected()) {
+            V2Store v6 = new V2Store();
+            v6.setVisible(true);
+            close();
+        }else{
+           JOptionPane.showConfirmDialog(null, "ERROR! Choose an option!", "ERROR!",JOptionPane.ERROR_MESSAGE, JOptionPane.NO_OPTION);
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton1ActionPerformed
+
+    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton2ActionPerformed
     public static void main(String args[]) {
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -144,7 +164,7 @@ public class V1 extends javax.swing.JFrame {
             }
         });
     }
-        public void close(){
+    public void close(){
         WindowEvent winClosingEvent = new WindowEvent(this, WindowEvent.WINDOW_CLOSING);
         Toolkit.getDefaultToolkit().getSystemEventQueue().postEvent(winClosingEvent);
     }
@@ -159,7 +179,6 @@ public class V1 extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton3;
